@@ -6,7 +6,9 @@ import faker from 'faker';
 import { random } from 'lodash';
 import {UnControlled as CodeMirror} from 'react-codemirror2';
 require('codemirror/mode/javascript/javascript');
-
+import Input from './components/Input';
+import Switch from './components/Switch';
+import Output from './components/Output';
 
 function App() {
   // const [obj, setObj] = useState({
@@ -136,9 +138,15 @@ function App() {
   
   return (
     <div className="App">
-      <div class="container">
-        <h2>Hello W </h2>
-        <CodeMirror
+        <Nav/>
+        <div className="container">
+          <h2 className="text-center my-4 py-4 secondary-text">Welcome to <br/>
+            <span className="font-weight-bold">Fake-the-<span className="primary-text">Json</span></span>
+          </h2>
+          <p></p>
+          <div className="row">
+            <div className="col-md-5 com-sm-12">
+            <CodeMirror
           options={cmOptions}
           onChange={(editor, data, value) => {
              try {
@@ -153,7 +161,15 @@ function App() {
           }}
         />
         <button onClick={() => generateFakeJson()}>Render</button>
-      </div>
+              </div>
+            <div className="col-md-2 com-sm-12">
+              <Switch/>
+            </div>
+            <div className="col-md-5 com-sm-12">
+              <Output/>
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

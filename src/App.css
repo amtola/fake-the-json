@@ -1,2 +1,16 @@
+<<<<<<< HEAD
 @import 'codemirror/lib/codemirror.css';
 @import 'codemirror/theme/material.css';
+=======
+.icons {
+  height: 40px;
+}
+
+.secondary-text {
+  color: #636363;
+}
+
+.primary-text {
+  color: #53b6fe;
+}
+>>>>>>> 6039ce0b8e0a1b16ff00efadbcdd717e7680e295
