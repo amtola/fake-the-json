@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAGA,OACE,WACF,CAEA,gBACE,aACF,CAEA,cACE,aACF","file":"main.e83eac3d.chunk.css","sourcesContent":["@import 'codemirror/lib/codemirror.css';\n@import 'codemirror/theme/material.css';\n\n.icons {\n  height: 40px;\n}\n\n.secondary-text {\n  color: #636363;\n}\n\n.primary-text {\n  color: #53b6fe;\n}\n"]}
