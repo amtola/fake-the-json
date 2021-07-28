@@ -5,6 +5,7 @@ import faker from 'faker';
 import { random } from 'lodash';
 import {UnControlled as CodeMirror} from 'react-codemirror2';
 import Switch from './components/Switch';
+import Footer from './components/Footer';
 require('codemirror/mode/javascript/javascript');
 
 
@@ -102,38 +103,41 @@ function App() {
     <div className="App">
         <Nav/>
         <div className="container">
-          <h2 className="text-center my-4 py-4 secondary-text">Welcome to <br/>
+          <h2 className="text-center my-4 py-4 secondary-text">Write Fake, Get Fake<br/>
             <span className="font-weight-bold">Fake-the-<span className="primary-text">Json</span></span>
           </h2>
           <p></p>
           <div className="row">
             <div className="col-md-5 com-sm-12">
-            <CodeMirror
-                options={cmOptions}
-                onChange={(editor, data, value) => {
-                try {
-                    var jsonStr = value.replace(/(\w+:)|(\w+ :)/g, function(matchedStr) {
-                      return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
-                    });
-                    
-                    setObj(JSON.parse(jsonStr))
-                } catch (error) {
-                    setObj({})
-                }
-              }}
-            />
+              <label>Input Schema</label>
+                <CodeMirror
+                    options={cmOptions}
+                    onChange={(editor, data, value) => {
+                    try {
+                        var jsonStr = value.replace(/(\w+:)|(\w+ :)/g, function(matchedStr) {
+                          return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
+                        });
+                        
+                        setObj(JSON.parse(jsonStr))
+                    } catch (error) {
+                        setObj({})
+                    }
+                  }}
+                />
               </div>
             <div className="col-md-2 com-sm-12">
               <Switch handleGenerateFakeJson={generateFakeJson}/>
             </div>
             <div className="col-md-5 com-sm-12">
-            <CodeMirror
-                options={cmOptions}
-                value={output}
-            />
+              <label>Output JSON</label> 
+              <CodeMirror
+                  options={cmOptions}
+                  value={output}
+              />
             </div>
           </div>
         </div>
+        <Footer/>
     </div>
   );
 }

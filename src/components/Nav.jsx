@@ -14,7 +14,7 @@ function Nav() {
                     <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                        
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <a className="nav-link" href="https://github.com/amtola/fake-the-json">
                                 <img className="icons" src={giticon}/>
                             </a>
                         </li>
