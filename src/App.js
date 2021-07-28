@@ -106,7 +106,6 @@ function App() {
           <h2 className="text-center my-4 py-4 secondary-text">Write Fake, Get Fake<br/>
             <span className="font-weight-bold">Fake-the-<span className="primary-text">Json</span></span>
           </h2>
-          <p></p>
           <div className="row">
             <div className="col-md-5 com-sm-12">
               <label>Input Schema</label>
@@ -136,6 +135,8 @@ function App() {
               />
             </div>
           </div>
+        </div>
+        <div>
         </div>
         <Footer/>
     </div>
