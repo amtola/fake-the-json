@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://amtola.github.io/fake-the-json/static/css/main.e83eac3d.chunk.css",
-    "main.js": "https://amtola.github.io/fake-the-json/static/js/main.f011fff8.chunk.js",
-    "main.js.map": "https://amtola.github.io/fake-the-json/static/js/main.f011fff8.chunk.js.map",
+    "main.js": "https://amtola.github.io/fake-the-json/static/js/main.8bff7f1b.chunk.js",
+    "main.js.map": "https://amtola.github.io/fake-the-json/static/js/main.8bff7f1b.chunk.js.map",
     "runtime-main.js": "https://amtola.github.io/fake-the-json/static/js/runtime-main.46af2a3f.js",
     "runtime-main.js.map": "https://amtola.github.io/fake-the-json/static/js/runtime-main.46af2a3f.js.map",
     "static/css/2.3ceb25c6.chunk.css": "https://amtola.github.io/fake-the-json/static/css/2.3ceb25c6.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.3ceb25c6.chunk.css",
     "static/js/2.bc2890d1.chunk.js",
     "static/css/main.e83eac3d.chunk.css",
-    "static/js/main.f011fff8.chunk.js"
+    "static/js/main.8bff7f1b.chunk.js"
   ]
 }
