@@ -11,7 +11,7 @@ require('codemirror/mode/javascript/javascript');
 
 function App() {
 
-  const [obj, setObj] = useState({
+  const [defaultObject, setDefaultObj] = useState({
   type: "object",
   prop: {
   	name: {
@@ -45,6 +45,8 @@ function App() {
     }
   }
 });
+
+  const [obj, setObj] = useState(null);
   const [output, setOutput] = useState({
     name: "Myrtle",
     comments: [
@@ -74,6 +76,10 @@ function App() {
     ]
   });
 
+  const [cursor, setCursor] = useState({
+    line: 0, ch: 0
+  })
+
   const generateFakeJson = () => {
     let defaultObj = {
       locale: 'en',
@@ -81,7 +87,7 @@ function App() {
       prop: null
     };
 
-    let mergeObj = Object.assign(defaultObj, obj);
+    let mergeObj = Object.assign(defaultObj, obj || defaultObject);
 
     setOutput(_generate_response(mergeObj))
   }
@@ -174,9 +180,19 @@ function App() {
             <div className="col-md-5 com-sm-12">
               <label>Input Schema</label>
                 <CodeMirror
-                    value={JSON.stringify(obj, null, 2)}
+                    value={JSON.stringify(defaultObject, null, 2)}
                     options={cmOptions}
                     onChange={(editor, data, value) => {
+                      let line = editor.lineCount() - 1;
+                      if (line == data.to.line && (data.from.line !== data.to.line)) {
+                        console.log('ss')
+                        editor.setCursor(cursor)
+                      } else {
+                        setCursor({
+                          line: data.to.line,
+                          ch: data.to.ch + 1
+                        });
+                      }
                     try {
                         console.log(value)
                         var jsonStr = value.replace(/(\w+:)|(\w+ :)/g, function(matchedStr) {
