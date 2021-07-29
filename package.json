@@ -1,4 +1,5 @@
 {
+  "homepage": "https://amtola.github.io/fake-the-json",
   "name": "faker-json",
   "version": "0.1.0",
   "private": true,
@@ -42,7 +43,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "homepage": "https://amtola.github.io/fake-the-json"
+    "gh-pages": "^3.2.3"
   }
 }
