@@ -11,8 +11,68 @@ require('codemirror/mode/javascript/javascript');
 
 function App() {
 
-  const [obj, setObj] = useState("");
-  const [output, setOutput] = useState("");
+  const [obj, setObj] = useState({
+  type: "object",
+  prop: {
+  	name: {
+    	type: "name.firstName",
+      min: 5
+    },
+    comments: {
+    	type: "array",
+      prop: {
+      	id: {
+        	type: "datatype.uuid"
+        },
+        users: {
+        	type: "array",
+          total: 3,
+          prop: {
+            name: {
+            	type: "name.firstName"
+            },
+            roles: {
+            	type: "object",
+              prop: {
+              	name: {
+                	type: "lorem.word"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+});
+  const [output, setOutput] = useState({
+    name: "Myrtle",
+    comments: [
+      {
+        id: "ea6b430e-bbea-49f8-bfbc-57d947862911",
+        users: [
+          {
+            name: "Elsie",
+            roles: {
+              name: "possimus"
+            }
+          },
+          {
+            name: "Wiley",
+            roles: {
+              name: "nobis"
+            }
+          },
+          {
+            name: "Layne",
+            roles: {
+              name: "rem"
+            }
+          }
+        ]
+      }
+    ]
+  });
 
   const generateFakeJson = () => {
     let defaultObj = {
@@ -23,7 +83,7 @@ function App() {
 
     let mergeObj = Object.assign(defaultObj, obj);
 
-    setOutput(JSON.stringify(_generate_response(mergeObj), null, 2))
+    setOutput(_generate_response(mergeObj))
   }
 
   const _generate_response = (obj) => {
@@ -69,19 +129,23 @@ function App() {
       fkr = fkr[item];
     })
 
-    if (obj.hasOwnProperty('min') && obj.hasOwnProperty('max')) {
-      return fkr(random(obj.min, obj.max));
+    try {
+      if (obj.hasOwnProperty('min') && obj.hasOwnProperty('max')) {
+        return fkr(random(obj.min, obj.max));
+      }
+  
+      if (obj.hasOwnProperty('min')) {
+         return fkr(obj.min);
+      }
+  
+      if (obj.hasOwnProperty('max')) {
+        return fkr(random(0, obj.max));
+      }
+  
+      return fkr();
+    } catch (error) {
+      return null;
     }
-
-    if (obj.hasOwnProperty('min')) {
-       return fkr(obj.min);
-    }
-
-    if (obj.hasOwnProperty('max')) {
-      return fkr(random(0, obj.max));
-    }
-
-    return fkr();
   }
 
   const cmOptions = {
@@ -110,9 +174,11 @@ function App() {
             <div className="col-md-5 com-sm-12">
               <label>Input Schema</label>
                 <CodeMirror
+                    value={JSON.stringify(obj, null, 2)}
                     options={cmOptions}
                     onChange={(editor, data, value) => {
                     try {
+                        console.log(value)
                         var jsonStr = value.replace(/(\w+:)|(\w+ :)/g, function(matchedStr) {
                           return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
                         });
@@ -131,7 +197,7 @@ function App() {
               <label>Output JSON</label> 
               <CodeMirror
                   options={cmOptions}
-                  value={output}
+                  value={JSON.stringify(output, null, 2)}
               />
             </div>
           </div>
