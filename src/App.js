@@ -185,7 +185,7 @@ function App() {
                         
                         setObj(JSON.parse(jsonStr))
                     } catch (error) {
-                        setObj({})
+                        // setObj({})
                     }
                   }}
                 />
