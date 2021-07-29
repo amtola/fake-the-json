@@ -1,6 +1,6 @@
 {
   "homepage": "https://amtola.github.io/fake-the-json",
-  "name": "faker-json",
+  "name": "fake-the-json",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
