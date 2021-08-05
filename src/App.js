@@ -109,12 +109,20 @@ function App() {
     }
 
     if (obj.type === 'array') {
-
-        if (! obj.prop) return false;
-
         result = [];
 
         let max = obj.total || 1;
+
+        if (obj.hasOwnProperty('plain') && obj.plain) {
+          obj.type = obj.dataType;
+          for(let i = 1; i <= max; i++) {
+              result.push(_generate_response(obj));
+          }
+
+          return result;
+        }
+
+        if (! obj.prop) return false;
 
         for(let i = 1; i <= max; i++) {
             let nObjs = {};
