@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "https://amtola.github.io/fake-the-json/static/css/main.e83eac3d.chunk.css",
-    "main.js": "https://amtola.github.io/fake-the-json/static/js/main.4da40d4d.chunk.js",
-    "main.js.map": "https://amtola.github.io/fake-the-json/static/js/main.4da40d4d.chunk.js.map",
-    "runtime-main.js": "https://amtola.github.io/fake-the-json/static/js/runtime-main.46af2a3f.js",
-    "runtime-main.js.map": "https://amtola.github.io/fake-the-json/static/js/runtime-main.46af2a3f.js.map",
+    "main.js": "https://amtola.github.io/fake-the-json/static/js/main.5f97a8ec.chunk.js",
+    "main.js.map": "https://amtola.github.io/fake-the-json/static/js/main.5f97a8ec.chunk.js.map",
+    "runtime-main.js": "https://amtola.github.io/fake-the-json/static/js/runtime-main.bd63145e.js",
+    "runtime-main.js.map": "https://amtola.github.io/fake-the-json/static/js/runtime-main.bd63145e.js.map",
     "static/css/2.3ceb25c6.chunk.css": "https://amtola.github.io/fake-the-json/static/css/2.3ceb25c6.chunk.css",
-    "static/js/2.6a0f3d27.chunk.js": "https://amtola.github.io/fake-the-json/static/js/2.6a0f3d27.chunk.js",
-    "static/js/2.6a0f3d27.chunk.js.map": "https://amtola.github.io/fake-the-json/static/js/2.6a0f3d27.chunk.js.map",
-    "static/js/3.94c76e44.chunk.js": "https://amtola.github.io/fake-the-json/static/js/3.94c76e44.chunk.js",
-    "static/js/3.94c76e44.chunk.js.map": "https://amtola.github.io/fake-the-json/static/js/3.94c76e44.chunk.js.map",
+    "static/js/2.648f09a1.chunk.js": "https://amtola.github.io/fake-the-json/static/js/2.648f09a1.chunk.js",
+    "static/js/2.648f09a1.chunk.js.map": "https://amtola.github.io/fake-the-json/static/js/2.648f09a1.chunk.js.map",
+    "static/js/3.1a3cbb1c.chunk.js": "https://amtola.github.io/fake-the-json/static/js/3.1a3cbb1c.chunk.js",
+    "static/js/3.1a3cbb1c.chunk.js.map": "https://amtola.github.io/fake-the-json/static/js/3.1a3cbb1c.chunk.js.map",
     "index.html": "https://amtola.github.io/fake-the-json/index.html",
     "static/css/2.3ceb25c6.chunk.css.map": "https://amtola.github.io/fake-the-json/static/css/2.3ceb25c6.chunk.css.map",
     "static/css/main.e83eac3d.chunk.css.map": "https://amtola.github.io/fake-the-json/static/css/main.e83eac3d.chunk.css.map",
-    "static/js/2.6a0f3d27.chunk.js.LICENSE.txt": "https://amtola.github.io/fake-the-json/static/js/2.6a0f3d27.chunk.js.LICENSE.txt",
+    "static/js/2.648f09a1.chunk.js.LICENSE.txt": "https://amtola.github.io/fake-the-json/static/js/2.648f09a1.chunk.js.LICENSE.txt",
     "static/media/git-icon.1829dd24.png": "https://amtola.github.io/fake-the-json/static/media/git-icon.1829dd24.png",
     "static/media/logo.0ae6a423.svg": "https://amtola.github.io/fake-the-json/static/media/logo.0ae6a423.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.46af2a3f.js",
+    "static/js/runtime-main.bd63145e.js",
     "static/css/2.3ceb25c6.chunk.css",
-    "static/js/2.6a0f3d27.chunk.js",
+    "static/js/2.648f09a1.chunk.js",
     "static/css/main.e83eac3d.chunk.css",
-    "static/js/main.4da40d4d.chunk.js"
+    "static/js/main.5f97a8ec.chunk.js"
   ]
 }
